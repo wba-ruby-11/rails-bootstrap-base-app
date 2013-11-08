@@ -1,0 +1,65 @@
+<html>
+<head>
+	<%= stylesheet_link_tag "style2.css" %>
+	<script src="javascript2.js"></script>
+	<link rel="icon" href="images/favicon.ico"/>
+	<title>World's Largest Professional Network | LinkedIn</title>
+</head>
+<body onload="hide_other_options()">
+
+	<div class="container">
+		<img src="images/logo1b.png">
+		<div class="content">
+
+			<div class="float_left">Grow you network on LinkedIn</div>
+			<div class="align_right">
+				<div class="steps">
+					Step <b>2</b> of <b>7</b>
+				</div>
+				<div class="blue"></div>
+				<div class="white"></div>
+			</div>
+
+			<hr/>
+
+			<div class="blue_div">
+				Get Started By adding your email address.
+				<div class="form1">
+					<form method="post" action="/signup/step3">
+						<table class="table1">
+							<tr>
+								<td class="coloumn1">Your email</td>
+								<td class="coloumn2">
+									<input id="input1" value="" 
+									type="text">
+								</td>
+							</tr>
+
+							<tr>
+								<td class="coloumn1"></td>
+								<td class="coloumn2"><input class="button1" id="button1" type="submit" value="Continue"></td>
+							</tr>
+							<tr>
+								<td class="coloumn1"></td>
+								<td class="coloumn2">
+									<div class="smallfont" >
+										We will not store your password or email without your permission
+									</div>
+								</td>
+							</tr>
+						</table>
+					</form>
+
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<div class="smallfont" >LinkedIn Corporation &copy 2013</div>
+			<div class="smallfont" id="no_border">Commercial use of this site without express authorization is prohibited.</div>
+		</div>
+	</div>
+</body>
+</html>

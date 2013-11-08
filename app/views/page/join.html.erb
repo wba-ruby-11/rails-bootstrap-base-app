@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="images/favicon.ico">
+	<title>Join LinkedIn | LinkedIn</title>
+	<link rel="stylesheet" href="styles/join_in.css" />
+
+	<%= stylesheet_link_tag "join_in.css" %>
+
+	<script src="jquery.js"></script>
+	<script src="join.js"></script>
+</head>
+<body>
+	<div id="big_wrapper">
+		<header id="the_header">
+			<div id="logo_container">
+				<a href="index.html"><img src="images/black_logo.png"></a>
+			</div>
+			<div id="sign_in" class="smaller">
+				Already on LinkedIn?
+				<a href="signin">Sign in</a>
+			</div>
+		</header>
+		<section id="main_section">
+			<div id="main_section_header">
+				<h1>To join LinkedIn, sign up below...it's free!</h1>
+			</div>
+			<div id="arrow">
+				<img src="images/arrow.png" width="22" height="11">
+			</div>
+			<div id="form_wrapper">
+				<form id="join_in" action="join.html" method="post">
+					<ul>
+						<li>
+							<label>First Name:</label>
+							<div>
+								<input type="text" id="fname" maxlength="20">
+							</div>
+						</li>
+						<li>
+							<label>Last Name:</label>
+							<div>
+								<input type="text" id="lname" maxlength="40">
+							</div>
+						</li>
+						<li>
+							<label>Email:</label>
+							<div>
+								<input type="email" id="email" maxlength="128">
+							</div>
+						</li>
+						<li>
+							<label>New Password:</label>
+							<div>
+								<input type="password" id="passwd">
+							</div>
+							<p>6 or more characters</p>
+						</li>
+					</ul>
+					<P id="submit">
+						<button type="submit">Join LinkedIn</button>
+						<abbr title="By clicking Join LinkedIn, you are indicating that you have read, understood, and agree to LinkedIn's User Agreement and Privacy Policy">*</abbr>
+					</P>
+					<div id="already">
+						Already on LinkedIn?
+						<a href="signin">Sign in</a>
+					</div>
+				</form>
+			</div>
+			<div id="fb_wrapper">
+				<div>
+					<div id="writing">
+						<img src="images/handwritten.png">
+					</div>
+					<a id="sign_up_fb" href="#">
+						<span>Sign up with Facebook</span>
+					</a>
+					<abbr title="By clicking Join LinkedIn, you are indicating that you have read, understood, and agree to LinkedIn's User Agreement and Privacy Policy">*</abbr>
+				</div>
+			</div>
+			<div id="agreement">
+				<p>
+					* By joining LinkedIn, you agree to LinkedIn's
+					<a href="agreement">User Agreement</a>,
+					<a href="#">Privacy Policy</a> and
+					<a href="#">Cookie Policy</a>
+				</p>
+			</div>
+		</section>
+		<footer id="the_footer">
+			<p id="copywrite">LinkedIn Corporation &copy; 2013</p>
+			<p id="terms">
+				Commercial use of this site without express authorization is prohibited.
+			</p>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+header, footer, section, aside, hgroup, nav{
+	display: block;
+}
+body{
+	overflow: scroll;
+	/*overflow-x: hidden;*/
+	font-family: arial;
+	font-style: normal;
+	position: relative;
+}
+a{
+	color: #069;
+	text-decoration:none;
+}
+#TheHeader{
+	background-image: -webkit-linear-gradient(top, #696969 0%,#3f3f3f 100%);
+	background-image: -moz-linear-gradient(top, #696969 0%,#3f3f3f 100%);
+	width: 100%;
+	height:42px;
+	line-height: 17px;
+	position: fixed;
+	top: 0;
+	margin-top: 8px;
+}
+#HeaderWrapper{
+	width: 974px;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 8px;
+	position: relative;
+
+}
+#logo{
+	float:left;
+	margin-left: -1px;
+	padding-top: 2.5px;
+	left: 0px;
+}
+#header_links{
+	float: right;
+	margin-top: 2px;
+}
+#header_links li{
+	/*margin-top: -1px;*/
+	display: inline-block;
+	float: left;
+}
+#header_links a{
+
+	color:#D7D7D7;
+	font-size: 13px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 11px;
+	padding-bottom: 14px;
+}
+#header_links a:hover{
+	color: #0099CC;
+}
+#header_links a:active{
+	background-color: #333333;
+}
+
+#page-title,h1{
+	color: #000;
+	margin-left: 219px;
+	margin-top: 66px;
+	padding: 13px;
+	font-size: 14.5px;
+	min-width: 100px;
+	padding-bottom: 15.5px;
+
+}
+#Thefooter{
+	font-size: 12px;
+	line-height: 14px;
+	color: #666;
+	font-weight: normal;
+	padding-top: 9px;
+	padding-bottom: 10px;
+	margin-top: 38px;
+	margin-left: 222px;
+	margin-right: auto;
+	width: 974px;
+	border-top: 1px solid #ccc;
+	display: inline-block;
+}
+#whole{
+	/*width: 800px;*/
+/*border: 1px solid red;*/
+/*margin: 0 auto;*/
+/*margin-left: 100px;*/
+/*padding-left: 0;*/
+width: 1200px;
+
+}
+#main a:hover{
+	text-decoration:underline;
+}
+#main{
+	/*margin-left: 247px;
+	margin-top: -8px;*/
+	line-height: 25px;
+	margin:0 auto;
+	width:1105px;
+	margin-left: 251px;
+}
+
+#footer_wrapper a:hover{
+	text-decoration:underline;
+}
+
+#footerline li{
+      display: inline-block;
+}
+.list{
+    border-left: 1px solid #ccc;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.countries li{
+	font-size: 13px;
+	list-style-type: disc;
+	float: left;
+	width: 36.4%;
+}
+

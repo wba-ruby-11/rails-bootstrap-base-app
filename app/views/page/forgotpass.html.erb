@@ -1,0 +1,178 @@
+<!doctype>
+<html lang="en">
+<head>
+	<!--<meta charset="utf-8" />-->
+	<link rel="icon" href="favicon.png" type="image/png" />
+	<title>Password Change | LinkedIn</title>
+	<!-- <link rel="stylesheet" href="styles/forgot_password.css" /> -->
+	<%= stylesheet_link_tag "forgot_password.css" %>
+
+	<script src="jquery.js"></script>
+	<script>
+		function MyFunction()
+	    {
+	        $(document).ready(function(){
+               if( $("#Passwordreset").val() == "" )
+               {
+               		$("#Error1").removeClass("hidden").addClass("shown");
+               		$("#Error2").removeClass("hidden").addClass("shown");
+               }
+               else if( $("#Passwordreset").val().length < 3 ) 
+               {
+               		$("#Error1").removeClass("hidden").addClass("shown");
+               		$("#Error2").removeClass("hidden").addClass("shown");
+               		$("#Request").text("We'll send instructions to the email below.");
+               		$("#Error2").text("The text you provided is too short (the minimum length is 3 characters, your text contains "+$("#Passwordreset").val().length+" characters).");
+               	}                    
+               	else
+               	{
+               		// Check if there are not more than 1 @ symbol
+               		var pos = 0;
+					var num1 = 0;
+					var index = -1;
+					var i = -1;
+               		while (pos != -1)
+               		{
+					    pos = $('#Passwordreset').val().indexOf("@", i + 1);
+					    if ( pos != -1 )
+					    {
+					    	num1 += 1;	
+					    }
+					    i = pos;
+					}
+					if ( num1 == 1 )
+					{
+						// Check that @ symbol & . symbol should come on other than 0 Index
+	               		i = $('#Passwordreset').val().indexOf("@");
+	               		var j = $('#Passwordreset').val().indexOf(".");
+						if ( i > 0 && j > 0 )
+						{
+							// Check that . symbol should not come right after @ symbol
+							if ( $('#Passwordreset').val().indexOf(".") - 1 != i )
+							{
+								// Check to get last . symbol & no two . symbol could occur together
+		               			i = $('#Passwordreset').val().indexOf("@") +1;
+		               			pos = 0;
+								num1 = 0;
+								var num2 = -1;
+								while (pos != -1)
+			               		{
+								    pos = $('#Passwordreset').val().indexOf(".", i + 1);
+								    if ( pos != -1 )
+								    {
+								    	num2 = pos;
+								    	num1++;
+								    	if ( $('#Passwordreset').val().indexOf(".", num2 + 1) - num2 == 1 )
+								    	{
+								    		pos = -1;
+								    		num1 = 555;
+								    	}	
+								    }
+								    i = pos;
+								}
+			               		if ( num1 != 555 )
+			               		{	
+			               			// Check if the string exists between last . symbol & @ symbol & atleast string of 2 characters comes after last . symbol
+									num1 = $('#Passwordreset').val().indexOf('@');
+									var num3 = $("#Passwordreset").val().length;
+				               		/*alert(num3);
+										alert(num2);
+				               		*/if ( ( num2 - num1 > 1 ) && ( num3 - num2 - 1 >= 2 ) )
+				               		{
+				               			// Email Format Correct
+				               			$("#Error2").text("Correct");
+				               		}
+				               		else
+							        {
+							        	$("#Error1").removeClass("hidden").addClass("shown");
+									    $("#Error2").removeClass("hidden").addClass("shown");
+					               		$("#Request").text("We'll send instructions to the email below.");
+					               		$("#Error2").text("Please enter a valid email address.");	
+							        }
+					            }
+					            else
+						        {
+						        	$("#Error1").removeClass("hidden").addClass("shown");
+								    $("#Error2").removeClass("hidden").addClass("shown");
+				               		$("#Request").text("We'll send instructions to the email below.");
+				               		$("#Error2").text("Please enter a valid email address.");	
+						        }
+					        }
+					        else
+					        {
+					        	$("#Error1").removeClass("hidden").addClass("shown");
+							    $("#Error2").removeClass("hidden").addClass("shown");
+			               		$("#Request").text("We'll send instructions to the email below.");
+			               		$("#Error2").text("Please enter a valid email address.");	
+					        }  	
+			            }
+			        	else
+				        {
+				        	$("#Error1").removeClass("hidden").addClass("shown");
+						    $("#Error2").removeClass("hidden").addClass("shown");
+		               		$("#Request").text("We'll send instructions to the email below.");
+		               		$("#Error2").text("Please enter a valid email address.");	
+				        }    
+			        }
+			        else
+			        {
+			        	$("#Error1").removeClass("hidden").addClass("shown");
+					    $("#Error2").removeClass("hidden").addClass("shown");
+	               		$("#Request").text("We'll send instructions to the email below.");
+	               		$("#Error2").text("Please enter a valid email address.");	
+			        }
+               	}
+	        });
+	    }
+	</script>
+</head>
+<body>
+	<header id="TheHeader">
+		<div id="HeaderWrapper">
+			<a href="index.html"><img id="Logo" src="images/logo.png" /></a>
+			<ul id="LinksList">
+				<li><a id="Links" href="linkedin">What is LinkedIn?</a></li>
+				<li><a id="Links" href="join">Join Today</a></li>
+				<li><a id="Links" href="signin">Sign In</a></li>
+			</ul>
+		</div>
+	</header>
+	<section id="BodyWrapper">
+		<div id="Error1" class="hidden">
+			<p>Please correct the marked field(s) below.</p>
+		</div>
+		<div>
+			<form name="PasswordReset" id="PasswordReset" method="POST">
+				<h1> Changing your password is simple</h1>
+				<p>
+					<div id="Request">Please enter your email address to get instructions.</div>
+				</p>
+				<div id="Error2" class="hidden">Please enter a value. </br></div>
+				<p>
+					<input type="email" name="email" value="" id="Passwordreset">
+				</p>
+				<p>
+					<input type="button" name="submit" value="Continue" id="submit" onclick="return MyFunction();">
+				</p>
+			</form>
+		</div>
+	</section>
+	<footer id="FooterWrapper">
+		<div id="FooterDiv">
+			<p id="Copyright">
+				<img id="FLogo" src="images/footerlogo.png" /> 
+			</p>
+			<div id="DivYear">
+				&copy; 2013
+			</div>
+			<ul>
+				<li id="FirstLink"><a href="agreement"> User Agreement </a></li>
+				<li id="FirstLink"><a href="#"> Privacy Policy </a></li>
+				<li id="FirstLink"><a href="#"> Community Guidelines </a></li>
+				<li id="FirstLink"><a href="#"> Cookie Policy </a></li>
+				<li id="FirstLink"><a href="#"> Copyright Policy </a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

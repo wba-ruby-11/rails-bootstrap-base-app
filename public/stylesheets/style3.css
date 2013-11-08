@@ -1,0 +1,149 @@
+.container
+{
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	/*border: 2px solid whitesmoke;*/
+}
+body
+{
+	/*background-color: whitesmoke;*/
+
+
+	background: #e9e9e9 url('images/texture_grain_200x200_v2.png');
+}
+.content
+{
+
+	width: 97.2%;
+	background-color: white;
+	color: #0077B5;
+	font-family: arial;
+	font-size: 16px;
+	margin-top: 10px;
+	padding: 10px;
+	height: 410px;
+	/*float: left;*/
+
+}
+.form1
+{
+	margin-top: 10px;
+	/*float: left;*/
+}
+
+.table1
+{
+
+	width: 98%;
+	padding: 2px;
+	font-family: arial;
+	font-size: 13px;
+	font-weight: bold;
+	
+}
+
+.table1 td
+{
+	padding-bottom: 10px;
+}
+.coloumn1
+{
+	text-align: right;
+	
+}
+.coloumn2
+{
+	width: 80%;
+}
+.table1 #input1
+{
+	width: 70%;
+}
+
+.simple_text
+{
+	font-weight: normal !important;
+}
+.smallfont
+{
+	font-family: arial;
+	font-size: 11px !important;
+	color: gray;
+	font-weight: normal !important;
+}
+.Normalfont
+{
+	font-family: arial;
+	font-size: 13px !important;
+	color: black;
+	font-weight: normal !important;
+	margin-top: 4px;
+}
+.button1
+{
+	color: white;
+	border-radius: 4px;
+	background-color:#0077B5;
+	height: 26px;
+}
+.footer
+{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.footer div
+{
+	float: left;
+	margin-right: 4px;
+	padding-right: 4px;
+	border-right: 1px solid gray;
+}
+#no_border
+{
+border: none;
+}
+.align_right
+{
+	text-align: right;
+}
+.float_left
+{
+	float: left;
+}
+.steps
+{
+	text-align: right;
+}
+.blue
+{
+	width: 30px;
+	height: 10px;
+	background-color: #0077B5;
+	border: 1px  solid black;
+	float: left;
+}
+.blue_div a{
+margin-left: 130px;
+}
+.white
+{
+	width: 100px;
+	height: 10px;
+	background-color: white;
+	border: 1px  solid black;
+}
+.blue_div
+{
+	width: 70%;
+	
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #DDF0F8;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+	margin-bottom: 20px;
+	border: 1px solid skyblue;
+}

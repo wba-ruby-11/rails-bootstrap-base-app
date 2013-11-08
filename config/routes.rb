@@ -1,5 +1,46 @@
 Bootstrap::Application.routes.draw do
 
+  get "page/join"
+
+  get "page/signin"
+
+  get "page/forgotpass"
+
+  get "page/agreement"
+
+  get "page/countries"
+
+  get "page/linkedin"
+
+  get "signin/index"
+  post "signin/index"
+
+  get "signin/welcome"
+
+   get "signin/logout"
+
+  get "signup/index"
+
+  get "signup/step1"
+  post "/signup/step1"
+
+  get "signup/step2"
+  post "/signup/step2"
+
+  get "signup/step3"
+  post "/signup/step3"
+
+  get "signup/step4"
+  post "/signup/step4"
+
+  get "signup/step5"
+
+  get "signup/step6"
+
+  get "signup/step7"
+
+  get "signup/step8"
+
   get "users/show"
 
   resources :feedbacks
@@ -75,7 +116,7 @@ Bootstrap::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
 
-  root :to => "home#index"
+  root :to => "signup#index"
 #  match ':controller(/:action(/:id(.:format)))'
   match 'home/index' => 'home#index'
 

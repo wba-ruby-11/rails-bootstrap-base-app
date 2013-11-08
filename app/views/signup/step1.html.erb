@@ -1,0 +1,239 @@
+<html>
+<head>
+	<%= stylesheet_link_tag "style1.css" %>
+	<link rel="icon" href="favicon.ico"/>
+	<%= javascript_include_tag "javascript1.js" %>
+	<title>World's Largest Professional Network | LinkedIn</title>
+	
+</head>
+<body onload="hide_other_options()">
+
+	<div class="container">
+		 <img src="/images/logo1b.png">
+		
+		<div class="content">
+
+			<b>Username</b>, let's start creating your professional profile
+			<hr/>
+
+			<div class="form1">
+
+
+				<form method="post" action="/signup/step2">
+					<table class="table1">
+
+
+						<tr>
+							<td class="coloumn1">* Country</td>
+							<td class="coloumn2">
+								<select name="country" class="select1">
+									<option value="Pakistan">Pakistan</option>
+									<option value="India">India</option>
+									<option value="America">America</option>
+									<option value="Singapore">Singapore</option>
+									<option value="London">London</option>
+									<option value="China">China</option>
+								</select>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="coloumn1">Postal Code</td>
+							<td class="coloumn2"><input name="postalcode" id="input1"type="text"></td>
+						</tr>
+
+						<tr>
+							<td class="coloumn1">I am currently:</td>
+							<td class="coloumn2" onchange="hide_other_options()">
+								<input name="status" value="Employed" id="radio1" type="radio"><lable class="simple_text">Employed</lable>
+								<input name="status" value="Job Seeker" id="radio2" type="radio"><lable class="simple_text">Job Seeker</lable>
+								<input name="status" value="Student" id="radio3" checked="checked" type="radio"><lable class="simple_text">Student</lable>
+							</td>
+						</tr>
+
+						<!-- Student Portion end -->
+						<tr id="student1">
+							<td class="coloumn1">* School/University</td>
+							<td class="coloumn2"><input id="input1"type="text"></td>
+						</tr>
+
+						<tr id="student2">
+							<td class="coloumn1">* Dates attended</td>
+							<td class="coloumn2">
+								<select class="date">
+									<option>2013</option>
+									<option>2012</option>
+									<option>2011</option>
+									<option>2010</option>
+									<option>2009</option>
+									<option>2008</option>
+								</select>
+								<lable class="simple_text">to</lable>
+								<select class="date">
+									<option>2013</option>
+									<option>2012</option>
+									<option>2011</option>
+									<option>2010</option>
+									<option>2009</option>
+									<option>2008</option>
+								</select>
+							</td>
+						</tr>
+
+						<tr id="student3">
+							<td class="coloumn1"></td>
+							<td class="coloumn2">
+								<lable class="smallfont">
+									Current students: enter your expected graduation year
+								</lable>
+							</td>
+						</tr>
+
+						<tr id="student4">
+							<td class="coloumn1">* Age</td>
+							<td class="coloumn2"><input type="checkbox" checked="checked">
+								<lable class="Normalfont">I am 18 or older.</lable>
+								<!-- <img src="images/bulb.png"> -->
+								<%= image_tag("bulb.png") %>
+							</td>
+						</tr>
+
+						<!-- Student Portion end -->
+
+						<!-- Employed Portion start -->
+						<tr id="Employed1">
+							<td class="coloumn1">* Job title</td>
+							<td class="coloumn2">
+								<input id="input1" type="text">
+							</td>
+						</tr>
+
+						<tr id="Employed2">
+							<td class="coloumn1"></td>
+							<td class="coloumn2"><input type="checkbox"><lable class="smallfont">I am self-employed</lable></td>
+						</tr>
+
+						<tr id="Employed3">
+							<td class="coloumn1">* Company</td>
+							<td class="coloumn2"><input id="input1"type="text"></td>
+						</tr>	
+
+						<tr id="Employed4">
+							<td class="coloumn1">* Industry:</td>
+							<td class="coloumn2">
+								<select class="select1">
+									<option>Accounting</option>
+									<option>Bussiness</option>
+									<option>Finance</option>
+									<option>Computer Science</option>
+									<option>Civil</option>
+									<option>Mechanical</option>
+								</select>
+							</td>
+						</tr>
+						<!-- Employed Portion end -->
+
+
+
+						<!-- Job Seeker Portion start -->
+						<tr id="Job_Seeker1">
+							<td class="coloumn1">* Most recent job title</td>
+							<td class="coloumn2">
+								<input id="input1" type="text">
+							</td>
+						</tr>
+
+						<tr id="Job_Seeker2">
+							<td class="coloumn1"></td>
+							<td class="coloumn2"><input type="checkbox"><lable class="smallfont">I am self-employed</lable></td>
+						</tr>
+
+						<tr id="Job_Seeker3">
+							<td class="coloumn1">* Most recent company</td>
+							<td class="coloumn2"><input id="input1"type="text"></td>
+						</tr>	
+
+
+						<tr id="Job_Seeker5">
+							<td class="coloumn1">* Industry:</td>
+							<td class="coloumn2">
+								<select class="select1">
+									<option>Accounting</option>
+									<option>Bussiness</option>
+									<option>Finance</option>
+									<option>Computer Science</option>
+									<option>Civil</option>
+									<option>Mechanical</option>
+								</select>
+							</td>
+						</tr>
+
+						<tr id="Job_Seeker4">
+							<td class="coloumn1">* Time period</td>
+							<td class="coloumn2">
+								<select class="date">
+									<option>2013</option>
+									<option>2012</option>
+									<option>2011</option>
+									<option>2010</option>
+									<option>2009</option>
+									<option>2008</option>
+								</select>
+								<lable class="simple_text">to</lable>
+								<select class="date">
+									<option>2013</option>
+									<option>2012</option>
+									<option>2011</option>
+									<option>2010</option>
+									<option>2009</option>
+									<option>2008</option>
+								</select>
+							</td>
+						</tr>
+						<!-- Job Seeker Portion end -->
+
+						<tr>
+							<td class="coloumn1"></td>
+							<td class="coloumn2">
+							 	<input class="button1" id="button1" onclick="changecolor()" type="submit" value="Create My Profile">
+
+							</td>
+						</tr>
+
+						<tr>
+							<td class="coloumn1"></td>
+							<td class="coloumn2">
+								<lable class="smallfont">
+									* Indicates required field.
+								</lable>
+							</td>
+						</tr>												
+
+					</table>
+
+					<div class="second_content" >
+						<div class="Normalfont"><img src="images/bulb.png"><b>A LinkedIn profile helps you...</b></div>
+						<div class="Normalfont"><img src="images/arrow.png">Showcase your skills and experience</div>
+						<div class="Normalfont"><img src="images/arrow.png">Be found for new opportunities</div>
+						<div class="Normalfont"><img src="images/arrow.png">Stay in touch with colleagues and friends</div>
+					</div>
+
+
+				</form>
+
+
+			</div>
+
+
+
+			
+
+		</div>
+
+		<div class="footer">
+			<div class="smallfont" >LinkedIn Corporation &copy 2013</div>
+			<div class="smallfont" id="no_border">Commercial use of this site without express authorization is prohibited.</div>
+		</div>
+	</div>
+</body>
+</html>
